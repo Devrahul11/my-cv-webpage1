@@ -184,22 +184,25 @@
 
     <!-- VR Experience Section -->
     <section class="vr-section animate__animated">
-      <h2>Step into My VR Experience</h2>
-      <p>Explore an interactive 3D environment that represents my innovative approach to business and technology.</p>
-      <!-- A-Frame VR Scene -->
-      <a-scene embedded style="height: 400px;">
-        <!-- A rotating box representing dynamic growth -->
-        <a-box position="-1 1 -3" rotation="0 45 0" color="#4CC3D9" animation="property: rotation; to: 360 405 360; loop: true; dur: 10000"></a-box>
-        <!-- A sphere representing innovation -->
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" animation="property: position; to: 0 2 -5; dir: alternate; loop: true; dur: 3000"></a-sphere>
-        <!-- A cylinder representing strong foundation -->
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <!-- A plane as a ground -->
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
-        <!-- A sky to set the mood -->
-        <a-sky color="#ECECEC"></a-sky>
-      </a-scene>
-    </section>
+  <h2>Step into My VR Experience</h2>
+  <p>Explore an interactive 3D environment that represents my innovative approach to business and technology.</p>
+  <!-- A-Frame VR Scene without the embedded attribute -->
+  <a-scene style="height:400px;">
+    <!-- A rotating box representing dynamic growth -->
+    <a-box position="-1 1 -3" rotation="0 45 0" color="#4CC3D9" 
+           animation="property: rotation; to: 360 405 360; loop: true; dur: 10000"></a-box>
+    <!-- A sphere representing innovation -->
+    <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" 
+              animation="property: position; to: 0 2 -5; dir: alternate; loop: true; dur: 3000"></a-sphere>
+    <!-- A cylinder representing strong foundation -->
+    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <!-- A plane as a ground -->
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+    <!-- A sky to set the mood -->
+    <a-sky color="#ECECEC"></a-sky>
+  </a-scene>
+</section>
+
   </div>
 
   <!-- Modal for Callback Request -->
