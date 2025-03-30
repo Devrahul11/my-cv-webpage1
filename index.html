@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rahul Dev - Creative CV</title>
-  <!-- Include Animate.css for quick CSS animations (optional) -->
+  <!-- Include Animate.css for optional CSS animations -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!-- Custom CSS -->
   <style>
@@ -27,12 +27,13 @@
     header h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
-      opacity: 0;
+      /* Remove initial opacity so it's visible */
+      opacity: 1;
     }
     header p {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
-      opacity: 0;
+      opacity: 1;
     }
     .container {
       max-width: 1200px;
@@ -51,8 +52,8 @@
       cursor: pointer;
       text-decoration: none;
       margin-top: 1rem;
-      opacity: 0;
       transition: transform 0.3s ease;
+      opacity: 1;
     }
     .cta-btn:hover {
       transform: scale(1.05);
@@ -65,7 +66,7 @@
       margin: 2rem 0;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      opacity: 0;
+      opacity: 1;
     }
     .cv-section h2 {
       margin-bottom: 1rem;
@@ -135,7 +136,7 @@
     .vr-section {
       margin: 3rem 0;
       text-align: center;
-      opacity: 0;
+      opacity: 1;
     }
     .vr-section h2 {
       margin-bottom: 1rem;
@@ -156,14 +157,14 @@
 <body>
   <!-- Header Section -->
   <header>
-    <h1 class="animate__animated">Rahul Dev</h1>
-    <p class="animate__animated">Director - Business Operations & Strategy</p>
-    <a href="#callback" class="cta-btn animate__animated" id="openModalBtn">Schedule a Callback</a>
+    <h1>Rahul Dev</h1>
+    <p>Director - Business Operations & Strategy</p>
+    <a href="#callback" class="cta-btn" id="openModalBtn">Schedule a Callback</a>
   </header>
 
   <div class="container">
     <!-- CV Content Section -->
-    <section class="cv-section animate__animated">
+    <section class="cv-section">
       <h2>Professional Profile</h2>
       <p>I am Rahul Dev, a transformational business leader with over 12 years of experience in P&L management, business turnarounds, and strategic growth across EdTech, Logistics, Agritech, and Foodtech sectors.</p>
       
@@ -183,7 +184,7 @@
     </section>
 
     <!-- VR Experience Section -->
-    <section class="vr-section animate__animated">
+    <section class="vr-section">
       <h2>Step into My VR Experience</h2>
       <p>Explore an interactive 3D environment that represents my innovative approach to business and technology.</p>
       <!-- A-Frame VR Scene using version 1.4.0 -->
@@ -225,13 +226,13 @@
   <!-- Include A-Frame (latest version 1.4.0) -->
   <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   <script>
-    // Animate elements in sequence using GSAP
+    // Use GSAP "from" animations to have elements appear nicely
     window.addEventListener('load', () => {
-      gsap.to("header h1", {duration: 1, opacity: 1, y: -20});
-      gsap.to("header p", {duration: 1, opacity: 1, delay: 0.5, y: -20});
-      gsap.to(".cta-btn", {duration: 1, opacity: 1, delay: 1, y: -20});
-      gsap.to(".cv-section", {duration: 1, opacity: 1, delay: 1.5, y: -20});
-      gsap.to(".vr-section", {duration: 1, opacity: 1, delay: 2, y: -20});
+      gsap.from("header h1", {duration: 1, opacity: 0, y: 20});
+      gsap.from("header p", {duration: 1, opacity: 0, delay: 0.5, y: 20});
+      gsap.from(".cta-btn", {duration: 1, opacity: 0, delay: 1, y: 20});
+      gsap.from(".cv-section", {duration: 1, opacity: 0, delay: 1.5, y: 20});
+      gsap.from(".vr-section", {duration: 1, opacity: 0, delay: 2, y: 20});
     });
 
     // Callback Modal Functionality
